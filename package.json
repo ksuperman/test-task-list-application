@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node Server/index.js"
+    "dev": "node Server/index.js",
+    "start": "node Server/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "npm": "6.x",
+    "node": "14.x"
+  }
 }
