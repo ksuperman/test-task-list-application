@@ -1,12 +1,13 @@
 const http = require('http');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const HOST_NAME = '127.0.0.1'
 
 const requestListener = (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
-  res.end('{"name": "Akshatha"}')
+  const name = process.env.NAME || 'Akshatha';
+  res.end(`{"name": "${name}"}`)
 }
 
 const server = http.createServer(requestListener)
