@@ -1,7 +1,6 @@
 const http = require('http');
 
 const PORT = process.env.PORT || 3000;
-const HOST_NAME = '127.0.0.1'
 
 const requestListener = (req, res) => {
   res.statusCode = 200;
@@ -12,7 +11,7 @@ const requestListener = (req, res) => {
 
 const server = http.createServer(requestListener)
 
-server.listen(PORT, HOST_NAME, () => {
-  console.log(`Server is Running on http//:${HOST_NAME}:${PORT}`)
+server.listen(PORT, () => {
+  console.log(`Server is Running on http//:localhost:${PORT}`)
 })
 
