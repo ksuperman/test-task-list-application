@@ -6,7 +6,7 @@ const HOST_NAME = '127.0.0.1'
 const requestListener = (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
-  const name = process.env.NAME || 'Akshatha';
+  const name = process.env.NAME || 'Akshatha Hebbar';
   res.end(`{"name": "${name}"}`)
 }
 
